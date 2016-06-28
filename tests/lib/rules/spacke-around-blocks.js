@@ -9,6 +9,7 @@ var ruleTester = new RuleTester();
 ruleTester.run("space-before-blocks", rule, {
 	valid: [
 		"\nvar a = 1;\n\nif (true) { console.log('whatever') } else { console.log('yeah') }\n\nvar b = 1;",
+		"\n// preceding comment is ok\nif (true) { console.log('whatever') } else { console.log('yeah') }\n\nvar b = 1;",
 		"\nvar a = 1;\n\nswitch(dog) { case 'pit bull': console.log('sweet dog, dawg'); break; }\n\nvar b = 1;",
 	],
 
