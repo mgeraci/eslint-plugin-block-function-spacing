@@ -8,7 +8,8 @@ var ruleTester = new RuleTester();
 
 ruleTester.run("space-before-blocks", rule, {
 	valid: [
-		"\nvar a = 1;\n\nif (true) { console.log('whatever') } else { console.log('yeah') }"
+		"\nvar a = 1;\n\nif (true) { console.log('whatever') } else { console.log('yeah') }\n\nvar b = 1;",
+		"\nvar a = 1;\n\nswitch(dog) { case 'pit bull': console.log('sweet dog, dawg'); break; }\n\nvar b = 1;",
 	],
 
 	invalid: [
@@ -25,6 +26,21 @@ ruleTester.run("space-before-blocks", rule, {
 				message: Errors.blockBlank,
 				type: "IfStatement"
 			}]
-		}
+		},
+
+		{
+			code: "\nvar a = 1;\nswitch(dog) { case 'pit bull': console.log('sweet dog, dawg'); break; }",
+			errors: [{
+				message: Errors.blockBlank,
+				type: "SwitchStatement"
+			}]
+		},
+		{
+			code: "\nswitch(dog) { case 'pit bull': console.log('sweet dog, dawg'); break; }\nvar a = 1;",
+			errors: [{
+				message: Errors.blockBlank,
+				type: "SwitchStatement"
+			}]
+		},
 	]
 });
