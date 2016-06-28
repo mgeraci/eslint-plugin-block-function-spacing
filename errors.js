@@ -1,3 +1,3 @@
 module.exports = {
-	blockBlank: "If block must be preceded and followed by a blank line"
-}
+	blockBlank: "A block (if, case, etc.) must be preceded and followed by a blank line"
+};
