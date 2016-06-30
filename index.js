@@ -3,7 +3,7 @@
 module.exports = {
   rules: {
     'space-around-blocks': require('./lib/rules/space-around-blocks'),
-    'space-before-function-props': require('./lib/rules/space-before-function-props'),
+    'space-before-function-prop': require('./lib/rules/space-before-function-prop'),
   },
   configs: {
     recommended: {
@@ -14,7 +14,7 @@ module.exports = {
       },
       rules: {
 				'space-around-blocks': 2,
-				'space-before-function-props': 2,
+				'space-before-function-prop': 2,
       }
     }
   }
