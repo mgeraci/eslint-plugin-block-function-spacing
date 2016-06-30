@@ -1,4 +1,4 @@
-# Space Before Function Props
+# Space Before Function Prop
 
 Functions, when defined as the properties of a dictionary, must be preceded by
 a line of whitespace.
