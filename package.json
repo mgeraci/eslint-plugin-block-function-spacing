@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-block-function-spacing",
   "version": "1.0.0",
-  "description": "A linting ruleset to enforce spacing around blocks and functiong",
+  "description": "A linting ruleset to enforce spacing around blocks and functions",
 	"keywords": [
 		"eslint",
 		"eslintplugin",
@@ -10,8 +10,12 @@
   "scripts": {
     "test": "mocha ./tests/**/*.js"
   },
-  "author": "Michael P. Geraci, OkCupid",
-  "license": "ISC",
+  "author": "Michael P. Geraci, made at OkCupid",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mgeraci/eslint-plugin-block-function-spacing"
+	},
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^2.13.1",
     "mocha": "^2.5.3"
