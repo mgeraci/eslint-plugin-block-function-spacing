@@ -1,8 +1,8 @@
 "use strict";
 
-var rule = require("../../../lib/rules/space-before-function");
+var rule = require("../../../lib/rules/space-before-function-prop");
 var RuleTester = require("eslint").RuleTester;
-var Errors = require("../../../errors");
+var Errors = require("../../../lib/errors");
 
 var ruleTester = new RuleTester();
 
@@ -20,26 +20,26 @@ ruleTester.run("space-before-function", rule, {
 			parserOptions: parserOptions,
 		},
 		{
-			code: "\nvar Component = React.createClass({\ngetInitialState() {},\n\nrender() {}\n});",
+			code: "\nvar Component = React.createClass({\ngetInitialState() {},\n\nrender() {},\n});",
 			parserOptions: parserOptions,
 		},
 	],
 
 	invalid: [
 		{
-			code: "\nvar a = {\nfoo(){},\n_bar(){},\n};",
+			code: "\nvar a = {\nfoo(){},\n_bar(){},\nbaz: 'qwer',\n};",
 			parserOptions: parserOptions,
 			errors: [{
 				message: Errors.functionPreceding,
-				type: "FunctionDeclaration"
+				type: "Property"
 			}]
 		},
 		{
-			code: "\nComponent = React.createClass({\ngetInitialState() {},\nrender() {}\n});",
+			code: "\nComponent = React.createClass({\ngetInitialState() {},\nrender() {},\n});",
 			parserOptions: parserOptions,
 			errors: [{
 				message: Errors.functionPreceding,
-				type: "FunctionDeclaration"
+				type: "Property"
 			}]
 		},
 	]

@@ -2,7 +2,7 @@
 
 var rule = require("../../../lib/rules/space-around-blocks");
 var RuleTester = require("eslint").RuleTester;
-var Errors = require("../../../errors");
+var Errors = require("../../../lib/errors");
 
 var ruleTester = new RuleTester();
 
