@@ -1,6 +1,6 @@
 "use strict";
 
-var rule = require("../../../lib/rules/space-before-function-prop");
+var rule = require("../../../lib/rules/space-before-function-props");
 var RuleTester = require("eslint").RuleTester;
 var Errors = require("../../../lib/errors");
 
